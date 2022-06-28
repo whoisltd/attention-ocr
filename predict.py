@@ -29,7 +29,7 @@ def show_origin_image():
 def visual_attention(result, attention_plot):
     len_result = len(result)
     for i in range(len_result):
-        show_origin_image()
+        # show_origin_image()
         temp_att = np.reshape(attention_plot[i], (height, width))
 
         cv2.imshow(f'predict word: {result[i]}', temp_att)
@@ -63,5 +63,5 @@ if __name__ == '__main__':
         result += v.one_hot_decode(predict)
 
     print(result)
-    attention_plot = attention_plot[:len(result), :]
-    visual_attention(result, attention_plot)
+    # attention_plot = attention_plot[:len(result), :]
+    # visual_attention(result, attention_plot)
